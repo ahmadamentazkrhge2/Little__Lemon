@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from "./HeroSection.module.css";
-import img from "../../../../assets/hero-img.jpg";
 
 const HeroSection = () => {
   const handleReserveTable = () => {
@@ -26,7 +25,7 @@ const HeroSection = () => {
           </button> */}
         </div>
         <div className={styles.heroImage}>
-          <img className={styles.img} src={img} alt="Delicious Mediterranean food at Little Lemon restaurant" />
+          <img className={styles.img} src="/images/1.jpg" alt="Delicious Mediterranean food at Little Lemon restaurant" />
         </div>
       </div>
     </section>

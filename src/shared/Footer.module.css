@@ -1,0 +1,149 @@
+.footer {
+  margin-top: auto;
+  background-color: var(--primary-color-one);
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.footerLogo img {
+  width: 130px;
+  height: auto;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.title {
+  word-spacing: 5px;
+  font-family: "Markazi Text", serif;
+  font-size: 1.6rem;
+  color: var(--highlight-color-one);
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* الروابط */
+.footerLinks,
+.contactInfo,
+.socialLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footerLinks li,
+.contactInfo li {
+  margin-bottom: 0.5rem;
+}
+
+.footerLinks a,
+.contactInfo a {
+  font-size: 1.1rem;
+  color: var(--highlight-color-one);
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footerLinks a:hover,
+.contactInfo a:hover {
+  color: var(--primary-color-two);
+}
+
+/* أيقونات السوشيال */
+.socialLinks {
+  display: flex;
+  gap: 1.1rem;
+}
+
+.socialLinks a {
+  font-size: 1.7rem;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--highlight-color-one);
+  transition: 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--primary-color-two);
+  transform: translateY(-3px);
+}
+
+/* التوافق مع الشاشات المتوسطة */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footerSection {
+    align-items: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}
+
+/* الهواتف */
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .socialLinks a {
+    font-size: 1.5rem;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* الشاشات الكبيرة */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1350px;
+  }
+
+  .footerContent {
+    gap: 4rem;
+  }
+
+  .socialLinks a {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+}

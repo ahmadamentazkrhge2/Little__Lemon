@@ -1,7 +1,7 @@
 import React from 'react'
 import chef1 from "../../../../assets/chefs1.jpg"
 import chef2 from "../../../../assets/chefs2.jpg"
-import styles from './ChefsSection.module.css'
+import styles from './chefsSection.module.css'
 
 const ChefsSection = () => {
   return (

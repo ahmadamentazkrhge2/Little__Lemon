@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import SignInDialog from "../../auth/SigninDialog";
+import SignInDialog from "../../auth/SignInDialog"
+
 const SignInPage = () => {
   const [isOpen, setIsOpen] = useState(true);
 

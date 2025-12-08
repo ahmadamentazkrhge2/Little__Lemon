@@ -2,8 +2,8 @@ import Header from "../../shared/Header";
 import Footer from "../../shared/Footer";
 import HeroSection from "./components/HeroSection/HeroSection";
 import SpecialsMealsSection from "./components/SpecialMealsSection/SpecialMealsSection";
-import Testimonials from "./components/Testimonials/Testimonials";
-import ChefsSection from "./components/ChefsSection/ChefsSection";
+import Testimonials from "./components/Testimonials/Testimonials.jsx";
+import ChefsSection from "./components/ChefsSection/ChefsSection.jsx";
 const Home = () => {
   return (
  

@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import styles from './Header.module.css';
-import logo from '../assets/Logo.jpg';
 import CartContext from '../store/CartContext';
 import CartDialog from '../pages/Home/components/CartSideBar/CartDialog';
 
@@ -20,7 +19,7 @@ const Header = () => {
       <div className={styles.container}>
         {/* Logo */}
         <Link to="/" className={styles.logo} onClick={closeMenu}>
-          <img src={logo} alt="Little Lemon Logo" />
+          <img src="/images/Logo.jpg" alt="Little Lemon Logo" />
         </Link>
 
         {/* Navigation Menu */}

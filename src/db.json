@@ -2,28 +2,28 @@
   "testimonials": [
     {
       "id": "C1",
-      "img": "/src/assets/commint1.jpg",
+      "img": "/images/commint1.jpg",
       "person": "Sarah Johnson",
       "rating": 4.5,
       "com": "Exceptional dining experience! Perfect in every detail."
     },
     {
       "id": "C2",
-      "img": "/src/assets/commint2.jpg",
+      "img": "/images/commint2.jpg",
       "person": "Mike Chen",
       "rating": 5,
       "com": "Amazing atmosphere and delicious food. The pasta bolognese is to die for!"
     },
     {
       "id": "C3",
-      "img": "/src/assets/commint3.jpg",
+      "img": "/images/commint3.jpg",
       "person": "Emily Rodriguez",
       "rating": 4,
       "com": "Absolutely loved the modern twist on traditional recipes. Highly recommended!"
     },
     {
       "id": "C4",
-      "img": "/src/assets/commint4.jpg",
+      "img": "/images/commint4.jpg",
       "person": "David Wilson",
       "rating": 4.5,
       "com": "Outstanding quality and service. Every dish was prepared to perfection."
@@ -32,21 +32,21 @@
   "specialMeals": [
     {
       "id": "1",
-      "img": "/src/assets/desert1.jpg",
+      "img": "/images/desert3.jpg",
       "title": "Pasta bolognese",
       "price": 12.99,
       "description": "Rich and meaty pasta with parmesan."
     },
     {
       "id": "2",
-      "img": "/src/assets/meal2.jpg",
+      "img": "/images/meal2.jpg",
       "title": "Caesar Salad",
       "price": 8.99,
       "description": "Fresh romaine with Caesar dressing."
     },
     {
       "id": "3",
-      "img": "/src/assets/drink5.jpg",
+      "img": "/images/drink5.jpg",
       "title": "Tomato Soup",
       "price": 6.5,
       "description": "Creamy tomato soup served with bread."
@@ -138,7 +138,5 @@
       "category": "drinks"
     }
   ],
-  "orders": [
- 
-  ]
+  "orders": []
 }

@@ -1,137 +1,169 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 20px 0 40px;
   position: relative;
+  overflow: hidden;
 }
 
-/* تنسيق الأسهم - داخل الحاوية */
-.container :global(.slick-prev) {
-  left: 10px;
-  z-index: 2;
+.slideItem {
+  padding: 5px;
+  transition: transform 0.3s ease;
 }
 
-.container :global(.slick-next) {
-  right: 10px;
-  z-index: 2;
+.slideItem:hover {
+  transform: translateY(-5px);
 }
 
-.container :global(.slick-prev:before),
-.container :global(.slick-next:before) {
-  font-size: 24px;
-  color: #333;
-  opacity: 0.8;
-}
+/* ========== أسهم احترافية ========== */
 
-.container :global(.slick-prev:hover:before),
-.container :global(.slick-next:hover:before) {
-  opacity: 1;
-  color: #000;
-}
-
-/* تنسيق النقاط */
-.container :global(.slick-dots) {
-  bottom: -35px;
-}
-
-.container :global(.slick-dots li button:before) {
-  font-size: 10px;
-  opacity: 0.5;
-}
-
-.container :global(.slick-dots li.slick-active button:before) {
-  opacity: 1;
-  color: #667eea;
-}
-
-/* جعل الأسهم أكثر وضوحاً */
 .container :global(.slick-prev),
 .container :global(.slick-next) {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.9);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 20;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.25s ease-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .container :global(.slick-prev:hover),
 .container :global(.slick-next:hover) {
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.45);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .container :global(.slick-prev) {
-    left: 5px;
-  }
-  
-  .container :global(.slick-next) {
-    right: 5px;
-  }
-  
-  .container :global(.slick-prev),
-  .container :global(.slick-next) {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .container :global(.slick-prev:before),
-  .container :global(.slick-next:before) {
-    font-size: 20px;
-  }
+.container :global(.slick-prev:active),
+.container :global(.slick-next:active) {
+  transform: translateY(-50%) scale(0.96);
 }
 
-/* Mobile */
+/* ========== أيقونة السهم ========== */
+
+.container :global(.slick-prev:before),
+.container :global(.slick-next:before) {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-top: 3px solid #495E57;
+  border-right: 3px solid #495E57;
+  transition: all 0.25s ease-out;
+}
+
+.container :global(.slick-prev:hover:before),
+.container :global(.slick-next:hover:before) {
+  border-color: #f4ce14;
+}
+
+/* اتجاه الأسهم */
+.container :global(.slick-prev:before) {
+  transform: rotate(-135deg);
+  margin-left: 4px;
+}
+
+.container :global(.slick-next:before) {
+  transform: rotate(45deg);
+  margin-right: 4px;
+}
+
+/* مواقع الأسهم */
+.container :global(.slick-prev) {
+  left: -15px;
+}
+
+.container :global(.slick-next) {
+  right: -15px;
+}
+
+/* ========== نقاط الأسفل ========== */
+
+.container :global(.slick-dots) {
+  bottom: -35px;
+}
+
+.container :global(.slick-dots li) {
+  margin: 0 8px;
+  width: 10px;
+  height: 10px;
+}
+
+.container :global(.slick-dots li button) {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.container :global(.slick-dots li button:before) {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #d5d5d5;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.container :global(.slick-dots li.slick-active button:before) {
+  width: 24px;
+  height: 10px;
+  background: linear-gradient(90deg, #495E57, #f4ce14);
+  border-radius: 6px;
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(244, 206, 20, 0.3);
+}
+
+/* ========== Responsive ========== */
+
 @media (max-width: 768px) {
-  .container {
-    padding: 20px 0;
-  }
-  
-  .container :global(.slick-prev) {
-    left: 8px;
-  }
-  
-  .container :global(.slick-next) {
-    right: 8px;
-  }
-  
   .container :global(.slick-prev),
   .container :global(.slick-next) {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .container :global(.slick-prev:before),
-  .container :global(.slick-next:before) {
-    font-size: 18px;
-  }
-  
-  .container :global(.slick-dots) {
-    bottom: -30px;
+    width: 42px;
+    height: 42px;
   }
 }
 
 @media (max-width: 480px) {
-  .container :global(.slick-prev) {
-    left: 5px;
-  }
-  
-  .container :global(.slick-next) {
-    right: 5px;
-  }
-  
   .container :global(.slick-prev),
   .container :global(.slick-next) {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    opacity: 0.7;
   }
-  
-  .container :global(.slick-prev:before),
-  .container :global(.slick-next:before) {
-    font-size: 16px;
+}
+
+@media (max-width: 360px) {
+  .container :global(.slick-prev),
+  .container :global(.slick-next) {
+    display: none !important;
   }
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #495E57;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.noData {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin: 20px;
 }

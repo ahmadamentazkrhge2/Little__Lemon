@@ -8,28 +8,55 @@ import dbData from "../../../public/db.json"
 
 export default function SimpleSlider() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false); // أصبح false لأن البيانات فورية
+  const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setData(dbData.testimonials || []);
+    
+    // Detect mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: data.length > 1,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: !isMobile,
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: true,
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,
+    cssEase: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: true
+        }
+      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          dots: true,
+          arrows: true,
+          centerMode: false
         }
       },
       {
@@ -38,7 +65,22 @@ export default function SimpleSlider() {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: true,
+          centerPadding: '60px',
+          dots: true,
+          arrows: false,
+          swipe: true,
+          touchThreshold: 10
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
           centerPadding: '40px',
+          dots: true,
+          arrows: false
         }
       },
       {
@@ -48,6 +90,20 @@ export default function SimpleSlider() {
           slidesToScroll: 1,
           centerMode: true,
           centerPadding: '20px',
+          dots: true,
+          arrows: false,
+          swipe: true
+        }
+      },
+      {
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          dots: true,
+          arrows: false,
+          swipe: true
         }
       }
     ]
@@ -56,11 +112,11 @@ export default function SimpleSlider() {
   return (
     <div className={styles.container}>
       {loading ? (
-        <div style={{ textAlign: "center", color: "green" }}>Loading ...</div>
+        <div className={styles.loading}>Loading testimonials...</div>
       ) : (
         <Slider {...settings}>
           {data.map((testimonial) => (
-            <div key={testimonial.id}>
+            <div key={testimonial.id} className={styles.slideItem}>
               <Card testimonial={testimonial} />
             </div>
           ))}
@@ -68,8 +124,8 @@ export default function SimpleSlider() {
       )}
       
       {data.length === 0 && !loading && (
-        <div style={{ textAlign: "center", color: "orange" }}>
-        No opinions
+        <div className={styles.noData}>
+          No testimonials available
         </div>
       )}
     </div>

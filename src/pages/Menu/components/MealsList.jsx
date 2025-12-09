@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import MealsItem from './MealsItem'
 import styles from "./MealsList.module.css"
 import MealDialog from './MealDialog'
-import dbData from "../../../db.json" 
+import dbData from "../../../../public/db.json" 
 
 const MealsList = (props) => {
   const [meals, setMeals] = useState([])
@@ -27,11 +27,10 @@ const MealsList = (props) => {
   };
 
   useEffect(() => {
-    // تحميل البيانات مباشرة من db.json بناء على activeTab
+ 
     try {
       const category = props.activeTab.toLowerCase();
       
-      // البيانات من db.json
       let categoryData = [];
       
       switch(category) {

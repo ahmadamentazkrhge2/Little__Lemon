@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./SpecialMealsSection.module.css";
-import dbData from "../../../../db.json"
+import dbData from "../../../../../public/db.json"
 
 const SpecialsMealsSection = () => {
   const [data, setData] = useState([]);

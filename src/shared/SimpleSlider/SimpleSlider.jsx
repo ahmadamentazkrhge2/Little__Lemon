@@ -4,7 +4,7 @@ import Card from "../../pages/Home/components/Testimonials/Card";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./SimpleSlider.module.css";
-import dbData from "../../db.json"
+import dbData from "../../../public/db.json"
 
 export default function SimpleSlider() {
   const [data, setData] = useState([]);

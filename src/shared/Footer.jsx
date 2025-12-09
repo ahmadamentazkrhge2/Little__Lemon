@@ -8,14 +8,13 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import styles from "./Footer.module.css";
-import footerLogo from "../assets/footer-logo.png";
 
 const Footer = () => {
   return (
     <footer className={styles.footer} style={{ marginTop: "auto" }}>
       <div className={`${styles.container} ${styles.footerContent}`}>
         <div className={styles.footerLogo}>
-          <img src={footerLogo} alt="Little Lemon Logo" loading="lazy" />
+          <img src="https://cdn-icons-png.flaticon.com/512/6539/6539278.png" alt="Little Lemon Logo" loading="lazy" />
         </div>
         
         <div className={styles.footerSection}>

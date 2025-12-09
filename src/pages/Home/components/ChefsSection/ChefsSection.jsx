@@ -1,6 +1,4 @@
 import React from 'react'
-import chef1 from "../../../../assets/chefs1.jpg"
-import chef2 from "../../../../assets/chefs2.jpg"
 import styles from './chefsSection.module.css'
 
 const ChefsSection = () => {
@@ -21,12 +19,12 @@ const ChefsSection = () => {
         </div>
         <div className={styles.images}>
           <img 
-            src={chef1} 
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400"
             alt="Chef preparing food in the kitchen" 
             className={`${styles.chefImg} ${styles.chefImgLeft}`} 
           />
           <img 
-            src={chef2} 
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
             alt="Chef presenting a beautifully plated dish" 
             className={`${styles.chefImg} ${styles.chefImgRight}`} 
           />

@@ -1,7 +1,6 @@
 import React from 'react';
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 import styles from './ContactSection.module.css';
-import restaurantImage from "../../../../assets/chefs1.jpg"
 
 
 const ContactSection = () => {
@@ -16,7 +15,7 @@ const ContactSection = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.imageContainer}>
-            <img src={restaurantImage} alt="Little Lemon Restaurant" className={styles.image} />
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="Little Lemon Restaurant" className={styles.image} />
           </div>
           
           <div className={styles.info}>

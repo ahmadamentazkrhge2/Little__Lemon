@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChefHat } from 'lucide-react'; 
 import styles from './StorySection.module.css';
-import image from "../../../../assets/meal2.jpg"
+
 const StorySection = () => {
   return (
     <section className={styles.storySection}>
@@ -32,7 +32,7 @@ const StorySection = () => {
             </div>
           </div>
           <div className={styles.imageContainer}>
-            <img src={image} alt="Little Lemon Founders" className={styles.image} />
+            <img src="https://unsplash.com/photos/meggqIxy2wE" alt="Little Lemon Founders" className={styles.image} />
           </div>
         </div>
       </div>

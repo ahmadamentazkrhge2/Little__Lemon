@@ -2,63 +2,65 @@
   "testimonials": [
     {
       "id": "C1",
-      "img": "/images/commint1.jpg",
+      "img": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400",
       "person": "Sarah Johnson",
       "rating": 4.5,
       "com": "Exceptional dining experience! Perfect in every detail."
     },
     {
       "id": "C2",
-      "img": "/images/commint2.jpg",
+      "img": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400",
       "person": "Mike Chen",
       "rating": 5,
       "com": "Amazing atmosphere and delicious food. The pasta bolognese is to die for!"
     },
     {
       "id": "C3",
-      "img": "/images/commint3.jpg",
+      "img": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400",
       "person": "Emily Rodriguez",
       "rating": 4,
       "com": "Absolutely loved the modern twist on traditional recipes. Highly recommended!"
     },
     {
       "id": "C4",
-      "img": "/images/commint4.jpg",
+      "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
       "person": "David Wilson",
       "rating": 4.5,
       "com": "Outstanding quality and service. Every dish was prepared to perfection."
     }
   ],
+
   "specialMeals": [
     {
       "id": "1",
-      "img": "/images/desert3.jpg",
+      "img": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=400",
       "title": "Pasta bolognese",
       "price": 12.99,
       "description": "Rich and meaty pasta with parmesan."
     },
     {
       "id": "2",
-      "img": "/images/meal2.jpg",
+      "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400",
       "title": "Caesar Salad",
       "price": 8.99,
       "description": "Fresh romaine with Caesar dressing."
     },
     {
       "id": "3",
-      "img": "/images/drink5.jpg",
+      "img": "https://images.unsplash.com/photo-1604908554026-3f6f87a6a51b?w=400",
       "title": "Tomato Soup",
       "price": 6.5,
       "description": "Creamy tomato soup served with bread."
     }
   ],
+
   "meals": [
     {
       "id": 1,
       "title": "Grilled Salmon",
       "desc": "Fresh salmon fillet grilled to perfection with herbs and lemon",
       "price": 24.99,
-      "img": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400",
+      "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400",
       "category": "meals"
     },
     {
@@ -66,7 +68,7 @@
       "title": "Beef Burger",
       "desc": "Juicy beef patty with cheese, lettuce and special sauce",
       "price": 16.5,
-      "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+      "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400",
       "category": "meals"
     },
     {
@@ -74,7 +76,7 @@
       "title": "Caesar Salad",
       "desc": "Crisp romaine lettuce with caesar dressing and parmesan",
       "price": 12.75,
-      "img": "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400",
+      "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400",
       "category": "meals"
     },
     {
@@ -82,17 +84,18 @@
       "title": "Margherita Pizza",
       "desc": "Classic pizza with tomato sauce, mozzarella and basil",
       "price": 18.25,
-      "img": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=400",
+      "img": "https://images.unsplash.com/photo-1601924582975-7efdce1cf5f3?w=400",
       "category": "meals"
     }
   ],
+
   "desserts": [
     {
       "id": 5,
       "title": "Chocolate Cake",
       "desc": "Rich chocolate cake with ganache frosting",
       "price": 8.99,
-      "img": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400",
+      "img": "https://images.unsplash.com/photo-1601972599720-36938d13a318?w=400",
       "category": "desserts"
     },
     {
@@ -112,13 +115,14 @@
       "category": "desserts"
     }
   ],
+
   "drinks": [
     {
       "id": 9,
       "title": "Fresh Orange Juice",
       "desc": "Freshly squeezed orange juice",
       "price": 4.5,
-      "img": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=400",
+      "img": "https://images.unsplash.com/photo-1582515073490-d44cf7ed274c?w=400",
       "category": "drinks"
     },
     {
@@ -126,7 +130,7 @@
       "title": "Iced Coffee",
       "desc": "Chilled coffee with milk and ice",
       "price": 5.25,
-      "img": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400",
+      "img": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400",
       "category": "drinks"
     },
     {
@@ -138,5 +142,45 @@
       "category": "drinks"
     }
   ],
+
+  "heroSection": {
+    "img": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400",
+    "title": "Welcome to Little Lemon",
+    "subtitle": "Delicious food made with love",
+    "cta": "Order Now"
+  },
+
+  "logo": {
+    "img": "https://images.unsplash.com/photo-1601924582975-7efdce1cf5f3?w=400",
+    "alt": "Little Lemon Logo"
+  },
+
+  "chefsSection": [
+    {
+      "id": "chef1",
+      "img": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400",
+      "name": "Sarah Johnson",
+      "role": "Head Chef"
+    },
+    {
+      "id": "chef2",
+      "img": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400",
+      "name": "Mike Chen",
+      "role": "Sous Chef"
+    },
+    {
+      "id": "chef3",
+      "img": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400",
+      "name": "Emily Rodriguez",
+      "role": "Pastry Chef"
+    },
+    {
+      "id": "chef4",
+      "img": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+      "name": "David Wilson",
+      "role": "Grill Chef"
+    }
+  ],
+
   "orders": []
 }

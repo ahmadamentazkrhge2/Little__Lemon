@@ -25,7 +25,7 @@ const HeroSection = () => {
           </button> */}
         </div>
         <div className={styles.heroImage}>
-          <img className={styles.img} src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400" alt="Delicious Mediterranean food at Little Lemon restaurant" />
+          <img className={styles.img} src="https://images.pexels.com/photos/18249426/pexels-photo-18249426/free-photo-of-building-in-town-in-france-at-night.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delicious Mediterranean food at Little Lemon restaurant" />
         </div>
       </div>
     </section>

@@ -11,6 +11,19 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
+/*  */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* المسافة بين الأيقونة والنص */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:var(--primary-color-one); /* لون مناسب للليمون */
+  text-decoration: none;
+}
+
+
 /* --------------------------------------------- */
 /* Container */
 /* --------------------------------------------- */

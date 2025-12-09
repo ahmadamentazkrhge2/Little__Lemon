@@ -32,7 +32,7 @@ const StorySection = () => {
             </div>
           </div>
           <div className={styles.imageContainer}>
-            <img src="https://unsplash.com/photos/meggqIxy2wE" alt="Little Lemon Founders" className={styles.image} />
+            <img src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg" className={styles.image} />
           </div>
         </div>
       </div>

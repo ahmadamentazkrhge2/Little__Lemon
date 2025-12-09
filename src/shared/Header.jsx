@@ -19,7 +19,8 @@ const Header = () => {
       <div className={styles.container}>
         {/* Logo */}
         <Link to="/" className={styles.logo} onClick={closeMenu}>
-          <img src="/images/Logo.jpg" alt="Little Lemon Logo" />
+            <img src="https://cdn-icons-png.flaticon.com/512/6539/6539278.png" alt="Lemon Icon" width="40" height="40" />
+  <span>Little Lemon</span> 
         </Link>
 
         {/* Navigation Menu */}

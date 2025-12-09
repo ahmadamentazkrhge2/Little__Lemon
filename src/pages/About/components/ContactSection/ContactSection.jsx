@@ -15,7 +15,7 @@ const ContactSection = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.imageContainer}>
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="Little Lemon Restaurant" className={styles.image} />
+            <img src="https://images.pexels.com/photos/18249426/pexels-photo-18249426/free-photo-of-building-in-town-in-france-at-night.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Little Lemon Restaurant" className={styles.image} />
           </div>
           
           <div className={styles.info}>

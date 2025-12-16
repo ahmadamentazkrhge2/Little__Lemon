@@ -1,5 +1,7 @@
+/* SimpleSlider.module.css */
 .container {
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0 40px;
   position: relative;
@@ -9,10 +11,82 @@
 .slideItem {
   padding: 5px;
   transition: transform 0.3s ease;
+  height: 100%; /* أضف هذا */
 }
 
 .slideItem:hover {
   transform: translateY(-5px);
+}
+
+/* ====== تحسينات أساسية للعرض على الجوال ====== */
+:global(.slick-slider) {
+  overflow: hidden;
+  width: 100%;
+}
+
+:global(.slick-list) {
+  margin: 0 -10px;
+  padding: 10px 0; /* أضفت padding للجوانب */
+  overflow: visible; /* مهم للعرض الصحيح */
+}
+
+:global(.slick-track) {
+  display: flex !important;
+  align-items: stretch;
+}
+
+:global(.slick-slide) {
+  height: auto !important; /* يسمح للارتفاع بالتعديل */
+  display: flex !important; /* مهم لـ slideItem */
+}
+
+:global(.slick-slide > div) {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+}
+
+/* ====== Media Queries للعرض على الجوال ====== */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px 40px;
+  }
+  
+  .slideItem {
+    padding: 2px; /* قللت المساحة */
+  }
+  
+  :global(.slick-list) {
+    margin: 0 -5px;
+  }
+  
+  :global(.slick-slide) {
+    padding: 0 2px !important; /* مسافة صغيرة بين البطاقات */
+  }
+  
+  /* تأكد أن البطاقات تأخذ العرض الكامل */
+  :global(.slick-slide > div) {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px 5px 35px;
+  }
+  
+  .slideItem {
+    padding: 1px;
+  }
+  
+  :global(.slick-list) {
+    margin: 0 -2px;
+  }
+  
+  :global(.slick-slide) {
+    padding: 0 1px !important;
+  }
 }
 
 /* ========== أسهم احترافية ========== */
@@ -124,13 +198,21 @@
   box-shadow: 0 2px 8px rgba(244, 206, 20, 0.3);
 }
 
-/* ========== Responsive ========== */
+/* ========== Responsive Adjustments for Arrows ========== */
 
 @media (max-width: 768px) {
   .container :global(.slick-prev),
   .container :global(.slick-next) {
     width: 42px;
     height: 42px;
+  }
+  
+  .container :global(.slick-prev) {
+    left: -5px;
+  }
+  
+  .container :global(.slick-next) {
+    right: -5px;
   }
 }
 

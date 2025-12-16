@@ -14,7 +14,6 @@ export default function SimpleSlider() {
   useEffect(() => {
     setData(dbData.testimonials || []);
     
-    // Detect mobile
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -46,7 +45,8 @@ export default function SimpleSlider() {
           slidesToShow: 3,
           slidesToScroll: 1,
           dots: true,
-          arrows: true
+          arrows: true,
+          centerMode: false
         }
       },
       {
@@ -64,12 +64,14 @@ export default function SimpleSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '60px',
+          centerMode: false,
+          centerPadding: '0',
           dots: true,
           arrows: false,
           swipe: true,
-          touchThreshold: 10
+          touchThreshold: 10,
+          variableWidth: false,
+          adaptiveHeight: false, // غيرت من true إلى false
         }
       },
       {
@@ -77,10 +79,13 @@ export default function SimpleSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '40px',
+          centerMode: false,
+          centerPadding: '0',
           dots: true,
-          arrows: false
+          arrows: false,
+          swipe: true,
+          variableWidth: false,
+          adaptiveHeight: false
         }
       },
       {
@@ -88,11 +93,13 @@ export default function SimpleSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '20px',
+          centerMode: false,
+          centerPadding: '0',
           dots: true,
           arrows: false,
-          swipe: true
+          swipe: true,
+          variableWidth: false,
+          adaptiveHeight: false
         }
       },
       {
@@ -101,9 +108,12 @@ export default function SimpleSlider() {
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: false,
+          centerPadding: '0',
           dots: true,
           arrows: false,
-          swipe: true
+          swipe: true,
+          variableWidth: false,
+          adaptiveHeight: false
         }
       }
     ]
